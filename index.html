@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Александр Смирнов — Game & Software Developer</title>
+<meta name="description" content="Портфолио Александра Смирнова: Unity-игры, микросервисная архитектура, Android-приложения. Студент БГТУ «ВОЕНМЕХ», ИСиТ.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="nav__logo" href="#top">SA<span>//</span></a>
+  <nav class="nav__links">
+    <a href="#about">Обо мне</a>
+    <a href="#projects">Проекты</a>
+    <a href="#stack">Стек</a>
+    <a href="#contacts">Контакты</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__grid-bg" aria-hidden="true"></div>
+    <p class="hero__eyebrow mono">студент 4 курса · БГТУ «ВОЕНМЕХ» · ИСиТ</p>
+    <h1 class="hero__title">
+      Александр<br>Смирнов
+    </h1>
+    <p class="hero__sub">
+      Разрабатываю игры на Unity, микросервисные системы
+      и Android-приложения. Ищу стажировку в Data Engineering.
+    </p>
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="#projects">Смотреть проекты</a>
+      <a class="btn" href="https://github.com/r3akt1v" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+    <div class="hero__stats mono">
+      <span><b>5</b> проектов</span>
+      <span><b>3</b> Unity-игры</span>
+      <span><b>1</b> микросервисная платформа</span>
+      <span><b>1</b> Android-приложение</span>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="section__head">
+      <h2>Обо мне</h2>
+      <p class="mono section__num">/ 01</p>
+    </div>
+    <div class="about__cols">
+      <p class="about__lead">
+        Учусь на направлении «Информационные системы и технологии».
+        Пишу код с первого курса: от учебных задач на C++ до полноценных
+        игровых и веб-проектов. Люблю, когда система работает целиком —
+        от генерации мира до деплоя в Docker.
+      </p>
+      <ul class="about__facts mono">
+        <li>Unity 6 · C# — 3 коммерческих по масштабу прототипа игры</li>
+        <li>PHP · MySQL · Nginx · Docker — микросервисная платформа</li>
+        <li>Kotlin · Jetpack Compose · Room — Android (MVVM)</li>
+        <li>Python — скрипты генерации ассетов и автоматизация</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="section__head">
+      <h2>Проекты</h2>
+      <p class="mono section__num">/ 02</p>
+    </div>
+
+    <article class="project">
+      <div class="project__media">
+        <img src="img/microservices-01.png" alt="Каталог фильмов — главная страница" loading="lazy">
+      </div>
+      <div class="project__body">
+        <div class="project__tags mono">
+          <span>PHP</span><span>MySQL</span><span>Nginx</span><span>Docker</span><span>JWT</span>
+        </div>
+        <h3>Каталог фильмов — микросервисная платформа</h3>
+        <p>
+          Полноценный веб-сервис с личным кабинетом, системой оценок и
+          отзывов и видеоплеером. Три независимых микросервиса
+          (каталог, оценки, пользователи) за Nginx API Gateway
+          с балансировкой, общая MySQL-база, JWT-авторизация,
+          отказоустойчивость через graceful degradation.
+          Всё поднимается одной командой <span class="mono">docker compose up</span>.
+        </p>
+        <a class="project__link" href="https://github.com/r3akt1v/movie-catalog-microservices" target="_blank" rel="noopener">github.com/r3akt1v/movie-catalog-microservices ↗</a>
+      </div>
+    </article>
+
+    <article class="project project--flip">
+      <div class="project__media">
+        <img src="img/benzomageddon.png" alt="Benzomageddon — трекер расходов" loading="lazy">
+      </div>
+      <div class="project__body">
+        <div class="project__tags mono">
+          <span>Kotlin</span><span>Jetpack Compose</span><span>MVVM</span><span>Room</span><span>Hilt</span><span>Retrofit</span>
+        </div>
+        <h3>Benzomageddon — трекер расходов для Android</h3>
+        <p>
+          Android-приложение учёта личных финансов: доходы и расходы
+          по категориям, статистика с диаграммами, календарь операций,
+          контроль месячного лимита и курсы валют. Clean Architecture
+          (View → ViewModel → Repository → Room/DataStore),
+          Hilt для DI, Material 3.
+        </p>
+        <a class="project__link" href="https://github.com/r3akt1v/benzomagedon" target="_blank" rel="noopener">github.com/r3akt1v/benzomagedon ↗</a>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project__media project__media--game">
+        <img src="img/lumberjack.png" alt="LumberjackGame — 3D-игра про лесоруба" loading="lazy">
+      </div>
+      <div class="project__body">
+        <div class="project__tags mono">
+          <span>Unity 6</span><span>C#</span><span>Procedural</span>
+        </div>
+        <h3>LumberjackGame — 3D survival-игра «Лесоруб»</h3>
+        <p>
+          Игровой цикл «руби — вези — продавай — улучшай» в
+          процедурно генерируемом мире: террейн, лес, день/ночь,
+          пилорама, квесты, система апгрейдов и сохранений.
+          Весь контент сцены строится кодом в рантайме.
+        </p>
+        <a class="project__link" href="https://github.com/r3akt1v/lumberjack-game" target="_blank" rel="noopener">github.com/r3akt1v/lumberjack-game ↗</a>
+      </div>
+    </article>
+
+    <article class="project project--flip">
+      <div class="project__media project__media--game">
+        <img src="img/puzzle3d.png" alt="Puzzle3D — 3D-пазл" loading="lazy">
+      </div>
+      <div class="project__body">
+        <div class="project__tags mono">
+          <span>Unity 6</span><span>C#</span><span>Geometry</span>
+        </div>
+        <h3>Puzzle3D — 3D-головоломка «Пазл»</h3>
+        <p>
+          Пазл с перетаскиванием объёмных фрагментов. Изображение
+          режется на куски правильной формы со случайными
+          «карманами» — алгоритм ear clipping, 5 уровней сложности,
+          таймер, подсказки, процедурный звук и окружение.
+        </p>
+        <a class="project__link" href="https://github.com/r3akt1v/puzzle3d" target="_blank" rel="noopener">github.com/r3akt1v/puzzle3d ↗</a>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project__media project__media--game">
+        <img src="img/sudoku3d.png" alt="Sudoku3D — 3D-судоку" loading="lazy">
+      </div>
+      <div class="project__body">
+        <div class="project__tags mono">
+          <span>Unity 6</span><span>C#</span><span>Python</span>
+        </div>
+        <h3>Sudoku3D — судоку в 3D</h3>
+        <p>
+          Классическое судоку 4×4 / 6×6 / 9×9, где клетки и фишки —
+          физические 3D-объекты на столе. Drag &amp; drop тайлов,
+          проверка корректности, подсказки. 3D-модели и звук
+          генерируются Python-скриптами.
+        </p>
+        <a class="project__link" href="https://github.com/r3akt1v/sudoku3d" target="_blank" rel="noopener">github.com/r3akt1v/sudoku3d ↗</a>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- STACK -->
+  <section class="section" id="stack">
+    <div class="section__head">
+      <h2>Стек</h2>
+      <p class="mono section__num">/ 03</p>
+    </div>
+    <div class="stack__grid">
+      <div class="stack__col">
+        <h4 class="mono">Game Dev</h4>
+        <p>Unity 6, C#, процедурная генерация, Unity UI, Blender-конвейер через Python-скрипты</p>
+      </div>
+      <div class="stack__col">
+        <h4 class="mono">Backend & Web</h4>
+        <p>PHP, MySQL, Nginx, Docker / Docker Compose, JWT, REST API</p>
+      </div>
+      <div class="stack__col">
+        <h4 class="mono">Mobile</h4>
+        <p>Kotlin, Jetpack Compose, MVVM, Room, DataStore, Hilt, Retrofit</p>
+      </div>
+      <div class="stack__col">
+        <h4 class="mono">Tools</h4>
+        <p>Python, Git, VS Code, Xcode, Visual Studio, Linux/Windows терминал</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTS -->
+  <section class="section section--contacts" id="contacts">
+    <div class="section__head">
+      <h2>Контакты</h2>
+      <p class="mono section__num">/ 04</p>
+    </div>
+    <div class="contacts">
+      <a class="contacts__item" href="https://github.com/r3akt1v" target="_blank" rel="noopener">
+        <span class="mono">GitHub</span>
+        <b>r3akt1v ↗</b>
+      </a>
+      <a class="contacts__item" href="mailto:alexfebruarr2005@gmail.com">
+        <span class="mono">Email</span>
+        <b>alexfebruarr2005@gmail.com</b>
+      </a>
+      <a class="contacts__item" href="tel:+79211704527">
+        <span class="mono">Телефон</span>
+        <b>+7 921 170-45-27</b>
+      </a>
+      <div class="contacts__item contacts__item--static">
+        <span class="mono">Локация</span>
+        <b>Санкт-Петербург</b>
+      </div>
+    </div>
+    <p class="contacts__note">
+      Открыт к стажировкам и совместным проектам —
+      особенно интересен Data Engineering.
+    </p>
+  </section>
+
+</main>
+
+<footer class="footer mono">
+  <span>© 2026 Александр Смирнов</span>
+  <span>сделано вручную · HTML / CSS / JS</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
